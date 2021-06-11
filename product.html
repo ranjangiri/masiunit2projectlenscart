@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       
+        .row{
+            display: flex;
+            gap:20px
+        }
+        .conatiner{
+            width: 90%;
+            border: 1px solid black;
+            margin: auto;
+
+        }
+        .box{
+            width: 33%;
+            margin-top:20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       
+    </div>
+</body>
+</html>
+<script>
+    var data = JSON.parse(localStorage.getItem('product'));
+
+    var item = [{
+        productid:0,
+        image: "https://static1.lenskart.com/media/catalog/product/cache/1/small_image/376x180/9df78eab33525d08d6e5fb8d27136e95//l/e/lenskart-air-la-e12965-c2-eyeglasses-dup_untitled-2_1.jpg",
+         price:999,
+        description:"Orange Transparent Full Rim Round Eyeglasses",
+        qty:1
+    },
+    {       productid: 1,
+            image:"https://static2.lenskart.com/media/catalog/product/cache/1/small_image/376x180/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13784-c1-eyeglasses_g_3016.jpg",
+            price:1199,
+            description:"Orange Transparent Full Rim Round Eyeglasses",
+            qty: 1
+        },
+        {   productid: 2,
+            image:"https://static.lenskart.com/media/catalog/product/cache/1/small_image/376x180/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e13358-c1-eyeglasses_g_5150_1.jpg",
+            price:1500,
+            description:"Orange Transparent Full Rim Round Eyeglasses",
+            qty: 1
+        }]
+   
+    if(data){
+    for(var j=0;j<10;j++){
+    
+    for(var i=0;i<=data.length-3;i+=3){
+        console.log("hi", i)
+  
+    var row = document.createElement('div')
+    row.setAttribute('class', 'row')
+    var div1 = document.createElement('div')
+    div1.setAttribute('class', 'box')
+    div1.value=i;
+    div1.addEventListener("click",function(){
+        console.log(data[this.value].description);
+        var newcart={
+            productid:data[this.value].productid,
+            image:data[this.value].image,
+            price: data[this.value].price,
+            description: data[this.value].description,
+            qty:1
+        }
+         var cardata=JSON.parse(localStorage.getItem("cartdata"));
+         if(cardata){
+             cardata.push(newcart);
+             localStorage.setItem("cartdata",JSON.stringify(cardata));
+         }
+         else{
+            var arr=[];
+            arr.push(newcart);
+            localStorage.setItem("cartdata",JSON.stringify(arr));
+         }
+        window.open("cart2.html");
+    })
+    div1.innerHTML=`<img src="${data[i].image}">`
+ 
+    var div2 = document.createElement('div')
+    div2.setAttribute('class', 'box')
+    div2.value = i+1;
+    div2.addEventListener("click", function () {
+            console.log(data[this.value].description);
+            var newcart = {
+                productid:data[this.value].productid,
+                image: data[this.value].image,
+                price: data[this.value].price,
+                description: data[this.value].description,
+                qty: 1
+            }
+            var cardata = JSON.parse(localStorage.getItem("cartdata"));
+            if (cardata) {
+                cardata.push(newcart);
+                localStorage.setItem("cartdata", JSON.stringify(cardata));
+            }
+            else {
+                var arr = [];
+                arr.push(newcart);
+                localStorage.setItem("cartdata", JSON.stringify(arr));
+            }
+            window.open("cart2.html");
+        })
+    div2.innerHTML = `<img src="${data[i+1].image}">`
+    var div3 = document.createElement('div')
+    div3.setAttribute('class', 'box')
+    div3.value = i + 2;
+        div3.addEventListener("click", function () {
+            console.log(data[this.value].description);
+            var newcart = {
+                productid:data[this.value].productid,
+                image: data[this.value].image,
+                price: data[this.value].price,
+                description: data[this.value].description,
+                qty: 1
+            }
+            var cardata = JSON.parse(localStorage.getItem("cartdata"));
+            if (cardata) {
+                cardata.push(newcart);
+                localStorage.setItem("cartdata", JSON.stringify(cardata));
+            }
+            else {
+                var arr = [];
+                arr.push(newcart);
+                localStorage.setItem("cartdata", JSON.stringify(arr));
+            }
+            window.open("cart2.html");
+        })
+    div3.innerHTML = `<img src="${data[i+2].image}">`
+  
+    
+    var container = document.getElementsByClassName('container')[0];
+
+    row.append(div1,div2,div3)
+    container.appendChild(row)
+ 
+    }
+    }
+}else{
+        localStorage.setItem('product',JSON.stringify(item))
+    }
+    
+</script>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent{
+            border-top: 30px solid darkslategrey;
+             border-left: 5px solid darkslategrey;
+            border-bottom: 5px solid darkslategrey;
+            border-right: 5px solid darkslategrey;
+        }
+        .container {
+           
+            width: 70%;
+            margin: auto;
+
+        }
+
+        .det {
+            display: flex;
+            gap: 30px;
+        }
+
+        .pqty {
+            text-align: center;
+        }
+
+        .smallbox {
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+        }
+
+        .floatr {
+            float: right;
+        }
+
+        .btn-style {
+            border: none;
+            background-color: chocolate;
+            width: 50%;
+            color: white
+        }
+
+        .t-h1 {
+            text-align: center;
+            width: 50%;
+
+        }
+
+        .description {
+            margin-left: 10px;
+            width: 50%;
+
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+    
+    </div>
+</body>
+
+</html>
+<script>
+    var data =JSON.parse(localStorage.getItem("cartdata"));
+    function demo(data){
+        var totalprice=0;
+         
+        for(i in data){
+        totalprice+=data[i].price;
+        var div = document.getElementsByClassName("det");
+        var p = document.createElement("p");
+
+        var ip = document.createElement("p");
+        var ip0 = document.createElement("p");
+        p.innerHTML = data[i].description;
+        ip.setAttribute("class", "pqty");
+
+        var img = document.createElement("img");
+        img.style="width:20%; height:100px;";
+        img.src = data[i].image;
+        ip0.innerHTML = "Qty";
+
+        ip.setAttribute("class", "smallbox")
+        ip.innerHTML = data[i].qty;
+
+        var ptag = document.createElement('p');
+        ptag.innerHTML = `PRODUCT PRICE :` + "<br>" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + `${data[0].price}`
+
+
+        var psub = document.createElement('p');
+        psub.innerHTML = `SUBTOTAL PRICE :` + "<br>" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + `${data[0].price * data[0].qty}`
+
+        psub.setAttribute('class', 'floatr');
+
+        var rem = document.createElement('button');
+        rem.innerHTML = `❌`;
+        rem.style = "border:none; background-color:white; margin-left:20%; margin-bottom:10px"
+        rem.value=Number(i);
+        rem.addEventListener('click',function(){
+            var div = document.getElementById("id"+this.value);
+            var reprice=data[this.value].price;
+            var data1=document.getElementById("idh1").textContent.split(" ");
+            var old=Number(data1[2]);
+            var h1=document.getElementById("idh1");
+            h1.innerHTML = `Order Total:<span style="color:chocolate;"> ${old-reprice}</span>`;
+            div.remove()
+            var data5=JSON.parse(localStorage.getItem("cartdata"));
+            for(var id=0;id<data5.length;id++){
+                console.log(data5[id].productid,this.value)
+                if(data5[id].productid==this.value){
+                    data5.splice(id,1);
+                    break;
+                }
+
+            }
+            localStorage.setItem("cartdata", JSON.stringify(data5));
+
+  
+        })
+
+        var parent = document.getElementsByClassName('parent')[0];
+        var container = document.createElement('div')
+        container.setAttribute('class','container')
+        container.id="id"+Number(i);
+
+        var div1 = document.createElement('div')
+        div1.setAttribute('class','description det')
+         div1.append(p);
+
+        var div2 = document.createElement('div')
+        div2.setAttribute('class', 'pimage det')
+        div2.append(img, ip0, ip, ptag, psub,rem);
+
+        container.append(div1, div2);
+        parent.appendChild(container);
+       
+        }
+         return totalprice;
+    }
+    var total=demo(data);
+    var div3 = document.createElement('div')
+    div3.setAttribute('class', 'qty det')
+    button1 = document.createElement("button");
+    button1.innerHTML = "<h1>Proceed to checkout</h1>";
+    button1.setAttribute('class', 'btn-style')
+
+    h1 = document.createElement("h1");
+    h1.innerHTML = `Order Total:<span style="color:chocolate;"> ${total}</span>`;
+    h1.setAttribute('class', 't-h1');
+    h1.id="idh1";
+    div3.append(h1,button1);
+    var parent = document.getElementsByClassName('parent')[0];
+    var container = document.createElement('div')
+    container.appendChild(div3);
+    parent.appendChild(container);
+    
+
+   
+</script>
