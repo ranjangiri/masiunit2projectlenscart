@@ -69,19 +69,7 @@
 
 </html>
 <script>
-    var data = [{
-            description: "bhsdfjsdkjbfkjlore",
-            price: 500,
-            image: "https://static2.lenskart.com/media/catalog/product/cache/1/thumbnail/100x100/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13526-c1-eyeglasses_g_8389.jpg",
-            qty: 1
-        },
-        {
-            description: "bhsdfjsdkjbfkjlore",
-            price: 500,
-            image: "https://static2.lenskart.com/media/catalog/product/cache/1/thumbnail/100x100/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13526-c1-eyeglasses_g_8389.jpg",
-            qty: 1
-        }
-        ]
+    var data =JSON.parse(localStorage.getItem("cartdata"));
     function demo(data){
         var totalprice=0;
          
@@ -96,6 +84,7 @@
         ip.setAttribute("class", "pqty");
 
         var img = document.createElement("img");
+        img.style="width:20%; height:100px;";
         img.src = data[i].image;
         ip0.innerHTML = "Qty";
 
@@ -116,7 +105,6 @@
         rem.style = "border:none; background-color:white; margin-left:20%; margin-bottom:10px"
         rem.value=Number(i);
         rem.addEventListener('click',function(){
-            
             var div = document.getElementById("id"+this.value);
             var reprice=data[this.value].price;
             var data1=document.getElementById("idh1").textContent.split(" ");
@@ -124,6 +112,8 @@
             var h1=document.getElementById("idh1");
             h1.innerHTML = `Order Total:<span style="color:chocolate;"> ${old-reprice}</span>`;
             div.remove()
+            data.splice(this.value, 1);
+            localStorage.setItem("cartdata", JSON.stringify(data));
 
   
         })
@@ -164,7 +154,6 @@
     container.appendChild(div3);
     parent.appendChild(container);
     
-
 
    
 </script>
