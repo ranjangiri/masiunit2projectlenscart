@@ -112,24 +112,24 @@
     
 
     document.getElementsByClassName("parent")[0].innerHTML=`<div >
-                <input class="width100"  type="text" placeholder="First Name" name="firstname">
+                <input class="width100 details"  type="text" placeholder="First Name" name="firstname">
             </div>
             <div>
-                <input class="width100" type="text" placeholder="Last Name" name="Lasttname">
+                <input class="width100 details" type="text" placeholder="Last Name" name="Lasttname">
             </div>
             <div>
-                <input class="width100" type="number" placeholder="Mobile" name="Mobile">
+                <input class="width100 details" type="number" placeholder="Mobile" name="Mobile">
             </div>
             <div>
-                <input class="width100" type="email" placeholder="Email Address" name="EmailAddress">
+                <input class="width100 details" type="email" placeholder="Email Address" name="EmailAddress">
             </div>
             <div>
-                <input class="width100" type="password" placeholder="Password" name="password">
+                <input class="width100 details" type="password" placeholder="Password" name="password">
             </div>
             <div>
                 <input class="refrel" type="text" name="reffrelcode" placeholder="Referal code">(Optional)
             </div>
-            <button class="width100 colorg">Register</button><br>
+            <button class="width100 colorg" onclick="signuplocalstorage()">Register</button><br>
             <div class="checkup floatr">
             <input type="checkbox" name="check" >Get updates on Whatsapp <img class="image " src="https://static.lenskart.com/media/desktop/img/25-July-19/whatsapp.png">
             </div>
@@ -146,8 +146,8 @@
           document.getElementsByClassName("parent")[0].innerHTML ="";
           document.getElementsByClassName("parent")[0].innerHTML =`<div>
         <form>
-            <input class="width100" type="text" name="ep" class = "" placeholder = "Mobile/Email">
-            <button class="width100 colorg">Proceed</button>
+            <input class="width100 signemail" type="email" name="ep"  placeholder = "Mobile/Email">
+            <button class="width100 colorg" onclick = "signincheck(event)">Proceed</button>
             <div class="checkup  floatr">
             <input type="checkbox" name="check" >Get updates on Whatsapp <img class="image" src="https://static.lenskart.com/media/desktop/img/25-July-19/whatsapp.png">
             </div><br>
@@ -159,4 +159,45 @@
     </div>
 `;
         }
+
+
+
+   function signuplocalstorage(){
+       var data=document.getElementsByClassName("details");
+       var signupdata={
+            firstname:data[0].value,
+            lastname:data[1].value,
+            mobile:data[2].value,
+            email:data[3].value,
+            password:data[4].value
+
+
+            }
+        var  localsignupdata = JSON.parse(localStorage.getItem("signup"));
+
+        if(localsignupdata){
+            localsignupdata.push(signupdata)
+            localStorage.setItem('signup',JSON.stringify(localsignupdata))
+            console.log("hi")
+        }else{
+            var arr = []
+            arr.push(signupdata)
+            localStorage.setItem('signup',JSON.stringify(arr))
+        }
+   } 
+   function signincheck(e){
+       e.preventDefault();       
+       var falg=true;
+       var data = JSON.parse(localStorage.getItem('signup'))
+       var email = document.getElementsByClassName('signemail')[0].value;
+        for(i in data){
+            if(data[i].email == email){
+                console.log("Success")
+                falg=false;
+            }
+        }
+        if(falg){
+            console.log("please signup first")
+        } 
+   }    
 </script>
