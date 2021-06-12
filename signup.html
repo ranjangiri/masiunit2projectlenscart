@@ -175,10 +175,18 @@
             }
         var  localsignupdata = JSON.parse(localStorage.getItem("signup"));
 
+        var falg2=true
         if(localsignupdata){
-            localsignupdata.push(signupdata)
-            localStorage.setItem('signup',JSON.stringify(localsignupdata))
-            console.log("hi")
+            for(key in localsignupdata){
+                if(localsignupdata[key].email==signupdata.email){
+                    falg2=false;
+                    alert("this eamil address is already registered");
+                }
+            }
+            if(falg2){
+                localsignupdata.push(signupdata);
+                localStorage.setItem('signup',JSON.stringify(localsignupdata));
+            }
         }else{
             var arr = []
             arr.push(signupdata)
