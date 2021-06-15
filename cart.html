@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent{
+            width:100%;
+            border-top: 30px solid darkslategrey;
+             border-left: 5px solid darkslategrey;
+            border-bottom: 5px solid darkslategrey;
+            border-right: 5px solid darkslategrey;
+            text-align: center;
+        }
+        .container {
+           
+            width: 70%;
+            margin: auto;
+
+        }
+        .pimage{
+            width: 100px;
+            height:100px;
+        }
+
+        .det {
+            display: flex;
+            gap: 30px;
+        }
+
+        .pqty {
+            text-align: center;
+        }
+
+        .smallbox {
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+
+        .floatr {
+            float: right;
+        }
+
+        .btn-style {
+            color: green;
+            border: 1px solid green;
+            border-radius: 50%;
+        }
+
+        .t-h1 {
+            text-align: center;
+            width: 50%;
+
+        }
+
+        .description {
+            margin-left: 10px;
+            width: 50%;
+
+
+        }
+        .width1{
+            width:1%;
+        }
+        .width2{
+            width:2%
+           
+        }
+        .width3{
+            width: 3%;
+        }
+        .width5{
+            width:5%
+           
+        }
+        .width10{
+            width:10%
+           
+        }
+        .width25{
+            width: 25%;
+        }
+        .width15{
+            width: 15%;
+        }
+        .width45{
+            width: 45%;
+        }
+        .colorp{
+            color:white;
+            height:50px;
+           background-color:chocolate;
+           font-size: 20px;
+           font-weight: bold;
+        }
+        .totalprice{
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        .remove-btn{
+            border: 0;
+            font-size:25px;
+            background-color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div >
+    <table class="parent">
+        <tr>
+            <th class="width1"></th>
+            <th class="width2"></th>
+            <th class="width15"></th>
+            <th class="width15"></th>
+            <th class="width25"></th>
+            <th class="width5"></th>
+            <th class="width5"></th>
+        </tr>
+    </table>
+    </div>
+
+    
+</body>
+
+</html>
+
+<script>
+    var data = JSON.parse(localStorage.getItem("cartdata"));
+    var parent1=document.getElementsByClassName("parent");
+    var ttp=0;
+    for(i in data){
+        ttp+=data[i].price*data[i].qty;
+       var tr=document.createElement("tr");
+        tr.id="tr"+i;
+        tr.innerHTML=`
+            <td ><img class="pimage"  src="https://static1.lenskart.com/media/catalog/product/cache/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/e/lenskart-air-la-e13778-c2-eyeglasses_g_9929.jpg" alt="ranjan"></td>
+            <td><table>
+                <tr><td><button value=${i} onclick="fun1([1,this.value])" class="btn-style">+</button></td></tr>
+                <tr><td id="qty${i}" class="smallbox">${data[i].qty}</td></tr>
+                <tr><td><button value=${i}  onclick="fun1([0,this.value])" class="btn-style">-</button></td></tr>
+            </table></td>
+            <td>product Price :<br>${data[i].price}</td>
+            <td><table><tr></tr>
+            <tr></tr>
+            <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr><td style="color:grey">selling fast very few left</td></tr></table></td>
+            <td id="subtotal${i}">Subtotal Price:<br>${data[i].price*data[i].qty}
+                </td>
+            <td><button value=${i} onclick="remove(this.value)" class="remove-btn">×</button></td>
+        
+        `   
+           
+            parent1[0].appendChild(tr);
+            
+        
+            }
+    var tr1=document.createElement("tr");
+    tr1.innerHTML=`<td class="totalprice" colspan="3";>Order Total::<span style="color:chocolate;">${ttp}<span></td>
+        <td></td>
+    <td colspan="4" class="colorp">PROCEED TO CHECKOUT</td>`
+    parent1[0].appendChild(tr1);
+
+
+
+    totalprice();
+    
+    function totalprice(){
+    var tr=document.getElementsByClassName("totalprice")[0];
+    var data3= JSON.parse(localStorage.getItem("cartdata"));
+    var ttp=0;
+    for(i1 in data3){
+        ttp+=data[i1].price*data[i1].qty
+    }
+    tr.innerHTML=`<td class="totalprice" colspan="4";>Order Total:<span style="color:chocolate;">${ttp}<span></td>`
+    
+    }
+      function fun1(a){
+          if(a[0]=="1"){
+              var tempdata = JSON.parse(localStorage.getItem("cartdata"));
+              for(j in tempdata){
+                  if(j==a[1]){
+                    var qty=document.getElementById("qty"+a[1]);
+              var subtotal=document.getElementById("subtotal"+a[1]);
+              qty.innerHTML=`${data[j].qty+1}`;
+              var newqty=data[j].qty+1;
+              subtotal.innerHTML=`Subtotal Price:<br>${data[j].price*newqty}`;
+              totalprice();
+            data[j].qty= data[j].qty + 1;
+            localStorage.setItem("cartdata",JSON.stringify(data));
+                  }
+              }
+              
+
+          }
+          else{
+              var tempdata = JSON.parse(localStorage.getItem("cartdata"));
+              for(q in tempdata){
+                  if(q==a[1]){
+              var qty = document.getElementById("qty"+a[1]);
+              var subtotal=document.getElementById("subtotal"+a[1]);
+              var res= data[q].qty - 1
+              data[q].qty =res;
+   
+              if(res<0){
+                  res=0;
+                  data[q].qty=0;
+                  qty.innerHTML = `${0}`;
+                  subtotal.innerHTML=`Subtotal Price:<br>${data[q].price*res}`;
+                  totalprice()
+              }
+              else{
+                  qty.innerHTML=`${res}`
+                  subtotal.innerHTML=`Subtotal Price:<br>${data[q].price*res}`;
+                  totalprice()
+              }
+              }
+              }
+              
+              localStorage.setItem("cartdata", JSON.stringify(data));
+            }
+        }
+    
+    function remove(a){
+        var remove1=document.getElementById("tr"+a);
+        var tempdata1 = JSON.parse(localStorage.getItem("cartdata"));
+        for(i2 in tempdata1){
+            if(i2==a){
+                tempdata1.splice(i2,1);
+            }
+        }
+        localStorage.setItem("cartdata",JSON.stringify(tempdata1));
+
+        remove1.remove();
+        totalprice();
+
+    }
+</script>
