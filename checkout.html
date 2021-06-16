@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .flex{
+            display: flex;
+
+        }
+         .btn-style {
+            color: green;
+            border: 1px solid green;
+            border-radius: 50%;
+        }
+
+        .t-h1 {
+            text-align: center;
+            width: 50%;
+
+        }
+        .inn-div{
+            margin-bottom: 10px;
+            width: 98%;
+            height: 30px;
+            color: white;
+            background-color: grey;
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+        .top-div{
+            margin-bottom: 10px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            height: 30px;
+            width: 99%;
+        }
+        .ans-div{
+            border: 1px solid grey;
+            margin-bottom: 10px;
+            color: black;
+            height: 60px;
+            padding-left: 10px;
+            padding-top: 15px; 
+            width: 98%;      
+        }
+        .redcolor{
+            background-color: red;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            padding-top: 5px;
+        }
+        .colorp{
+            color:white;
+            height:40px;
+           background-color:coral;
+           font-size: 20px;
+           border-radius: 5px;
+           width: 20%;
+           border: none;
+           margin-bottom: 60px;
+           margin-top: 20px;
+        }
+        .totalprice{
+            font-size: 20px;
+            font-weight: bolder;
+            border: 1px solid grey;
+        }
+        .totalprice1{
+            font-size: 20px;
+            font-weight: bolder;
+            border: 1px solid grey;
+        }
+        .remove-btn{
+            border: 0;
+            font-size:25px;
+            background-color: white;
+        }
+        .parent{
+            width:100%;
+            border-top: 30px solid darkslategrey;
+            border-left: 1px solid grey;
+            border-right: 1px solid grey;
+            text-align: center;
+        }
+        
+        .pimage{
+            width: 70px;
+            height:30px;
+        }
+
+
+        .pqty {
+            text-align: center;
+        }
+
+        .smallbox {
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+      
+        .width60{
+            width: 60%;
+        }
+        .lenscart-logo{
+            background-color: black;
+            margin-bottom: 20px;
+           
+        }
+        .padding10{
+            padding-left: 10%;
+        }
+        .icon{
+            width: 30%;
+            height: 250px;
+            border: 1px solid grey;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding-left: 20px;
+        }
+        .icon-bottom{
+            border-bottom: 1px solid grey;
+            
+
+        }
+        .top-btn{
+            background-color: darkslategray;
+            width: 30%; 
+            color:white; 
+            height: 50px; 
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .top-span{
+        border: 1px solid white;
+        border-radius: 50%;
+        font-size: 18px; 
+        background-color: white;
+        color: black; 
+        padding: 2px 4px;
+        margin-right: 3px;
+        }
+        .width25{
+            width:  25%;
+        }
+        .flex2{
+            display: flex;
+            flex-flow: column wrap;
+
+        }
+        .width40{
+            width: 40%;
+        }
+        .gold{
+            background-color: greenyellow;
+            text-align:center;
+        }
+        .input{
+            width: 35%;
+            margin-bottom: 40px;
+            height: 25px;
+        }
+        .checkbox{
+            border-radius: 50%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    
+    <div>
+        <div class="redcolor">
+            Power can be submitted within 7 days of placing order. No additional charge for higher power
+        </div>
+        <div class="lenscart-logo">
+            <img style="width: 10%;height:30px; padding-left: 15%;" src="https://static.lenskart.com/media/desktop/img/checkout_Lenskart_logo_2x.png" alt=""><span style="padding-top: 5px;">lenscart</span>
+        </div>
+       
+    </div>
+
+        
+
+    </div>
+    <div class="flex">
+        <div class="width60 padding10">
+       <button class="top-btn"><span class="top-span">1</span>Mobile</button>
+        <button class="top-btn"><span class="top-span">2</span>Shipping Address</button>
+        <button class="top-btn"><span class="top-span">3</span>Payment & Discount</button>
+        <div>
+            <label for="mobile">Mobile</label><br>
+            <input class="input" type="text" placeholder="Please Enter your mobile no">
+            <div><input  type="radio" name="ch2">Checkout as guest</div>
+            <div><input class="checkbox" type="radio" name="ch2">I have account</div>
+            <button class="colorp">Proceed</button>
+        </div>
+        
+        <div class="flex">
+            <div style="border: 1px solid grey; width: 40%;padding-left:20px;border-left: none;">
+           <p>When can I specify my lens power?</p>
+After you complete the checkout process you'll be able to choose your lens power online. We don't charge for adding
+power to lens!</div>
+<div style="border: 1px solid grey; width:40% ;padding-left:20px"><p>I have a discount coupon/reward points</p>
+Great! You can apply a discount coupon/reward points during step 3 of the checkout process.</div>
+        </div>
+        <div class="flex">
+            <div class="icon"><p class="icon-bottom"><img src="https://static.lenskart.com/media/desktop/img/ckhkout-img4.png" alt=""> Perfect Fit Promise</p>
+            We know you want to be sure your new glasses fit perfectly. That's why youll have 14 days to trythem, if they aren't
+            right for you simply return them for adjustment, replacement, or a complete refund.</div>
+            <div class="icon"><p class="icon-bottom"><img src="https://static.lenskart.com/media/desktop/img/ckhkout-img1.png" alt=""> Dr. Ujjwal Sonika, / AIIMS</p>
+            I had seen these stylish products off and on, and finally bought a pair of rimless glasses from their store. I love the
+            quality of the frames and the precision with which my lenses have been made and fitted. They are very professional with
+            what they do. Good work!</div>
+            <div class="icon"><p class="icon-bottom"><img src="https://static.lenskart.com/media/desktop/img/ckhkout-img5.png" alt=""> Best Price Guaranteed</p>
+            If you find your chosen products cheaper at any other Indian online retailer, we'll refund the difference. This is why
+            our customers know they always get the best prices in the country.</div>
+        </div>
+        <div>
+                <div class="top-div">ALL YOUR DOUBTS RESOLVED</div>
+                <div class="inn-div">Ques 1. What is Gold Membership?</div>
+                <div class="inn-div">Ques 2. I’m not sure about the size and fit of the frames.</div>
+                <div class="inn-div">Ques 3. What if I buy glasses & they don’t fit me? What if the lenses aren’t right ?</div>
+                <div class="inn-div">Ques 4. Will the glasses have my prescription?</div>
+                <div class="inn-div">Ques 5. I have a complex power, can it be made?</div>
+                <div class="inn-div">Ques 6. Where do I submit my eye power details?</div>
+                <div class="ans-div">Ans 6. You can submit your power details after you complete your purchase. We offer multiple options to provide your
+                prescription to us – upload a picture, enter it online, email us (power@lenskart.com) or call us at +91-9999899998</div>
+                
+                <div class="inn-div">Ques 7. I don’t have my prescription handy. Is it important to give it right away?</div>
+                <div class="inn-div">Ques 8. I don’t know what my prescription is. Can you help?</div>
+                <div class="inn-div">Ques 9. I really, really want to try the frames on before making a purchase!</div>
+                <div class="inn-div">Ques 10. How can I be sure of the quality of the frames?</div>
+                <div class="inn-div">Ques 11. What lenses will you use? I use thin, anti-glare lenses?</div>
+                <div class="inn-div">Ques 12. I haven’t heard of some of the brands available. How does one determine which brands to stock?</div>
+                <div class="inn-div">Ques 13. How many days will they take to make my eyeglasses?</div>
+                <div class="inn-div">Ques 14. I don’t like what I have purchased! What is your return policy?</div>
+        </div>
+        </div>
+        <div class="width40">
+        <table class="parent flex2">
+            <tr>
+                <th class="width25"></th>
+                <th class="width25"></th>
+                <th class="width40"></th>
+                <th class="width25"></th>
+               
+            </tr>
+            <table class="flex2 totalprice" style="border: 1px solid grey;">
+            
+           
+            </table>
+        </table>
+        
+           
+        </div>
+       
+    </div>
+ 
+ 
+
+</body>
+</html>
+<script>
+   var data = JSON.parse(localStorage.getItem("cartdata"));
+    var parent1 = document.getElementsByClassName("parent");
+    var ttp = 0;
+    for (i in data) {
+        ttp += data[i].price * data[i].qty;
+        var tr = document.createElement("tr");
+        tr.id = "tr" + i;
+        tr.innerHTML = `
+            <td class="width25"><img class="pimage"  src="${data[i].image}" alt="ranjan"></td>
+            <td class="width25"><table>
+                <tr><td><button value=${i} onclick="fun1([1,this.value])" class="btn-style">+</button></td></tr>
+                <tr><td id="qty${i}" class="smallbox">${data[i].qty}</td></tr>
+                <tr><td><button value=${i} onclick="fun1([0,this.value])" class="btn-style">-</button></td></tr>
+            </table></td>
+            <td class="width25">product Price :<br>${data[i].price}</td>
+            <td class="width25"><button value=${i} onclick="remove(this.value)" class="remove-btn">×</button></td>
+        `
+
+        parent1[0].appendChild(tr);
+
+
+    }
+
+
+    totalprice();
+
+    function totalprice() {
+        var tr = document.getElementsByClassName("totalprice")[0];
+        var data3 = JSON.parse(localStorage.getItem("cartdata"));
+        var ttp = 0;
+        var tax=0;
+        for (i1 in data3) {
+            ttp += data[i1].price * data[i1].qty
+        }
+        tax=ttp*18/100;
+        tr.innerHTML = `<tr class="gold">Gold Member</tr><br>
+        <tr class="totalprice1" >Sub Total:₹${ttp}
+        </tr><br>
+        <tr class="totalprice1" >Net Amount:₹${ttp}
+        </tr><br>
+        <tr class="totalprice1" >Tax Collected:₹${tax}
+        </tr><br>
+        <tr class="totalprice1" >Order Total::₹${ttp+tax}
+        </tr><br>
+    `
+    }
+    
+    function fun1(a) {
+        if (a[0] == "1") {
+            var tempdata = JSON.parse(localStorage.getItem("cartdata"));
+            for (j in tempdata) {
+                if (j == a[1]) {
+                    var qty = document.getElementById("qty" + a[1]);
+                    //var subtotal = document.getElementById("subtotal" + a[1]);
+                    qty.innerHTML = `${data[j].qty + 1}`;
+                    var newqty = data[j].qty + 1;
+                    //subtotal.innerHTML = `Subtotal Price:<br>${data[j].price * newqty}`;
+                   
+                    data[j].qty = data[j].qty + 1;
+                    localStorage.setItem("cartdata", JSON.stringify(data));
+                     totalprice();
+                }
+            }
+
+
+        }
+        else {
+            var tempdata = JSON.parse(localStorage.getItem("cartdata"));
+            for (q in tempdata) {
+                if (q == a[1]) {
+                    var qty = document.getElementById("qty" + a[1]);
+                    //var subtotal = document.getElementById("subtotal" + a[1]);
+                    var res = data[q].qty - 1
+                    data[q].qty = res;
+
+                    if (res < 0) {
+                        res = 0;
+                        data[q].qty = 0;
+                        qty.innerHTML = `${0}`;
+                        //subtotal.innerHTML = `Subtotal Price:<br>${data[q].price * res}`;
+                        totalprice()
+                    }
+                    else {
+                        qty.innerHTML = `${res}`
+                        //subtotal.innerHTML = `Subtotal Price:<br>${data[q].price * res}`;
+                        totalprice()
+                    }
+                }
+            }
+
+            localStorage.setItem("cartdata", JSON.stringify(data));
+        }
+    }
+
+    function remove(a) {
+        var remove1 = document.getElementById("tr" + a);
+        var tempdata1 = JSON.parse(localStorage.getItem("cartdata"));
+        for (i2 in tempdata1) {
+            if (i2 == a) {
+                tempdata1.splice(i2, 1);
+            }
+        }
+        localStorage.setItem("cartdata", JSON.stringify(tempdata1));
+
+        remove1.remove();
+        totalprice();
+
+    }
+</script>
