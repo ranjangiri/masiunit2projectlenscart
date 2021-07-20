@@ -1,0 +1,106 @@
+.refrel {
+  border: 1px solid black;
+  width: 40%;
+  height: 35px;
+  margin: 10px;
+}
+#heigth30 {
+  height: 30px;
+}
+
+.mbtn {
+  margin-left: 10px;
+  border: none;
+  background-color: white;
+}
+.flexed {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: white;
+}
+.p {
+  width: 30%;
+  margin: auto;
+}
+.fbbtn {
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+}
+.fb {
+  margin: auto;
+  border: none;
+}
+.image {
+  width: 20px;
+  height: 20px;
+}
+.image1 {
+  margin: auto;
+}
+.checkup {
+  font-size: 15px;
+  width: 75%;
+  margin: auto;
+}
+.height20 {
+  height: 40px;
+}
+.mainbox {
+  opacity: 0;
+  background-color: white;
+  width: 60%;
+  margin: 30px auto;
+  padding-bottom: 35px;
+  transform: translateY(-30%);
+}
+.floatl {
+  float: left;
+}
+.colorg {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+}
+.width100 {
+  border-top: 1px;
+  border-left: none;
+  border-right: none;
+  width: 85%;
+  height: 35px;
+  margin: 10px;
+}
+.width50 {
+  width: 100%;
+  padding-bottom: 175px;
+}
+
+.floatr {
+  float: right;
+}
+.taligncenter {
+  text-align: center;
+}
+.error {
+  font-family: "futura std book";
+  margin: 0%;
+  padding: 0%;
+  font-weight: lighter;
+  font-size: small;
+  color: red;
+}
+.PopUp {
+  display: none;
+  margin-top: -10px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.651);
+}
+.pop_up_page {
+  display: block;
+  transform: translateY(0%);
+  opacity: 1;
+  transition: transform 0.3s ease-out, opacity 0.25s linear;
+}

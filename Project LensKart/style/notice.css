@@ -1,0 +1,23 @@
+.row {
+  width: 90%;
+}
+.notice {
+  margin: auto;
+  font-size: larger;
+  font-weight: bolder;
+  border-radius: 7px;
+  background-color: rgb(255, 245, 228);
+  padding: 10px 0px;
+}
+.notice table {
+  margin: auto;
+  width: 90%;
+}
+
+.notice table td:nth-child(2) {
+  padding: 0px 20px;
+  font-weight: normal;
+}
+.notice a {
+  color: rgb(2, 189, 214);
+}

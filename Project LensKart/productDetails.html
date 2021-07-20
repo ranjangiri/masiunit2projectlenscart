@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/product_details.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/addToCart.css" />
+    <link rel="stylesheet" href="style/cart.css" />
+    <link rel="stylesheet" href="style/shortlist-cart.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/signPop.css" />
+
+    <script src="javaScript/signPop.js"></script>
+    <script src="javaScript/shortlist-cart-popUp.js"></script>
+    <script src="javaScript/addToCart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/80a8c07c9b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="signupPopUp" class="PopUp">
+      <button
+        onclick="signPagePopOut()"
+        style="
+          position: fixed;
+          left: 80%;
+          background-color: transparent;
+          border: none;
+          color: rgba(255, 255, 255, 0.781);
+        "
+      >
+        <i class="fas fa-times fa-2x"></i>
+      </button>
+      <div class="mainbox" id="mainbox">
+        <div class="floatl flexed">
+          <img
+            src="https://static1.lenskart.com/media/desktop/img/sign-up.png"
+            alt=" banner"
+            srcset=""
+          />
+        </div>
+        <div class="flexed">
+          <div class="width50">
+            <button class="mbtn" onclick="signup()">Sign Up</button>
+            <button class="mbtn" onclick="signin()">Sign In</button>
+
+            <form class="parent1"></form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shortlist_container">
+      <div class="shortlist" id="shortlist">
+        <div class="head">PRODUCTS(<span id="shortlist_count">0</span>)</div>
+        <div class="data" id="shortlistBox">
+          You have not selected any product to compare.Please add products of
+          your choice and view here.
+        </div>
+      </div>
+    </div>
+
+    <div class="cart_wrapper">
+      <div class="cart_box">
+        <button
+          onclick="cartPopOut()"
+          style="
+            float: right;
+            border: none;
+            color: white;
+            background-color: rgb(75, 76, 81);
+            font-weight: bold;
+            padding: 1vw;
+          "
+        >
+          X
+        </button>
+        <div class="divX">
+          <h1 class="p">
+            SHOPPING CART(<span style="font-size: 1.1vw" id="cart_count">0</span
+            >)
+          </h1>
+        </div>
+        <div class="table_1">
+          <table class="parent"></table>
+        </div>
+        <div class="table_2"></div>
+      </div>
+    </div>
+
+    <div class="addCartPopUp_wrapper" id="addCartPopUp">
+      <div class="addCartPopUp" id="addCartPopUp">
+        <div class="headingX">
+          <p>
+            SELECT LENSES FOR SINGLE VISION
+            <span style="font-size: 1.1vw">(Submit power post checkout)</span>
+          </p>
+          <button
+            onclick="addCartPopOut()"
+            style="
+              background-color: transparent;
+              border: none;
+              color: black;
+              padding: 10px;
+            "
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="flexY">
+          <div class="containerX">
+            <div class="card" style="background-color: rgba(13, 86, 164)">
+              <img
+                class="imgX"
+                src="https://static3.lenskart.com/media/desktop/img/blu_logo.png
+"
+                alt="Denim Jeans"
+              />
+              <p class="textX">Frame + Lens ₹3600</p>
+              <p class="textX1">1 Year Warranty</p>
+              <p><button onclick="addtocart()">ADD TO CART</button></p>
+            </div>
+            <ul class="ul">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass">
+                Blue Block & Anti-Glare
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12)
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                Double-Side Anti-Glare
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass1">
+                Crack, Smudge & Scratch Resistant
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                Water & Dust Repellent
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                UV 420 - Protection
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+            </ul>
+          </div>
+          <div class="containerX">
+            <div class="card" style="background-color: rgba(13, 86, 164)">
+              <img
+                class="imgX"
+                src="https://static3.lenskart.com/media/desktop/img/blu_logo.png
+  "
+                alt="Denim Jeans"
+              />
+              <p class="textX">Frame + Lens ₹3600</p>
+              <p class="textX1">1 Year Warranty</p>
+              <p><button onclick="addtocart()">ADD TO CART</button></p>
+            </div>
+            <ul class="ul">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass">
+                Blue Block & Anti-Glare
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12)
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                Double-Side Anti-Glare
+                <span
+                  ><img
+                    class="iconX"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass1">Scratch Resistant <span></span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+            </ul>
+          </div>
+          <div class="containerX">
+            <div class="card" style="background-color: white">
+              <p class="margintop">Anti Glare Premium</p>
+              <p class="textX">Frame + Lens ₹3600</p>
+              <p class="textX1 grey">6 Mon. Warranty</p>
+              <p><button onclick="addtocart()">ADD TO CART</button></p>
+            </div>
+            <ul class="ul">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12) <span></span>
+              </li>
+              <li class="liclass">Double-Side Anti-Glare <span></span></li>
+              <li class="liclass1">
+                Crack, Smudge & Scratch Resistant <span></span>
+              </li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+            </ul>
+          </div>
+          <div class="containerX">
+            <div class="card" style="background-color: white">
+              <p class="margintop">Anti Glare Essential</p>
+              <p class="textX">Frame + Lens ₹3600</p>
+              <p class="textX1 grey">6 Mon. Warranty</p>
+              <p><button>ADD TO CART</button></p>
+            </div>
+            <ul class="ul">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12) <span></span>
+              </li>
+              <li class="liclass1">
+                Crack, Smudge & Scratch Resistant <span></span>
+              </li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="addCartPopUp_wrapperX" id="addCartPopUpX">
+      <div class="addCartPopUpX" id="addCartPopUpX">
+        <div class="headingZ">
+          <p>
+            SELECT LENSES FOR ZERO POWER
+            <span style="font-size: 1.1vw">(Submit power post checkout)</span>
+          </p>
+          <button
+            onclick="addCartPopOutX()"
+            style="
+              background-color: transparent;
+              border: none;
+              color: black;
+              padding: 10px;
+            "
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="flexZ">
+          <div class="containerZ">
+            <div class="card" style="background-color: rgba(13, 86, 164)">
+              <img
+                class="imgZ"
+                src="https://static3.lenskart.com/media/desktop/img/blu_logo.png
+  "
+                alt="Denim Jeans"
+              />
+              <p class="textZ">Frame + Lens ₹3600</p>
+              <p class="textZ1">1 Year Warranty</p>
+              <p><button onclick="addtocartX()">ADD TO CART</button></p>
+            </div>
+            <ul class="ulZ">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass">Blue Block & Anti-Glare <span></span></li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12) <span></span>
+              </li>
+              <li class="liclass">Double-Side Anti-Glare <span></span></li>
+              <li class="liclass1">
+                Crack, Smudge & Scratch Resistant <span></span>
+              </li>
+              <li class="liclass">Water & Dust Repellent <span></span></li>
+              <li class="liclass">UV 420 - Protection <span></span></li>
+            </ul>
+          </div>
+          <div class="containerZ">
+            <div class="card" style="background-color: rgba(13, 86, 164)">
+              <img
+                class="imgZ"
+                src="https://static3.lenskart.com/media/desktop/img/blu_logo.png
+      "
+                alt="Denim Jeans"
+              />
+              <p class="textZ">Frame + Lens ₹3600</p>
+              <p class="textZ1">1 Year Warranty</p>
+              <p><button onclick="addtocartX()">ADD TO CART</button></p>
+            </div>
+            <ul class="ulZ">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass">
+                Blue Block & Anti-Glare
+                <span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12)
+                <span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                Double-Side Anti-Glare
+                <span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                Water & Dust Repellent
+                <span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                UV-420 Protection<span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass"><span class="cut">✖</span></li>
+            </ul>
+          </div>
+          <div class="containerZ">
+            <div class="card" style="background-color: rgba(13, 86, 164)">
+              <img
+                class="imgZ"
+                src="https://static3.lenskart.com/media/desktop/img/blu_logo.png
+              "
+                alt="Denim Jeans"
+              />
+              <p class="textZ">Frame + Lens ₹3600</p>
+              <p class="textZ1">1 Year Warranty</p>
+              <p><button onclick="addtocartX()">ADD TO CART</button></p>
+            </div>
+            <ul class="ulZ">
+              <p class="colorpowderblue">
+                Buy 1 Get 1 Free with Gold Membership
+              </p>
+              <hr />
+              <li class="liclass">
+                Blue Block & Anti-Glare
+                <span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass">
+                1.6 - 1.74 Index (Thinnest - For Powers Upto-12)
+                <span
+                  ><img
+                    class="iconZ"
+                    src="https://static.lenskart.com/media/desktop/img/information-button.png"
+                    alt=""
+                /></span>
+              </li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+              <li class="liclass"><span class="cut">✖</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="top_header">
+        <nav class="navList">
+          <ul class="items">
+            <li class="mainItem">Try in 3d</li>
+            <li class="mainItem">Store Locator</li>
+            <li class="mainItem">Quality</li>
+            <li class="mainItem">USA</li>
+            <li class="mainItem">Singapore</li>
+            <li class="mainItem">UAE</li>
+            <li class="mainItem">John Jacobs</li>
+            <li class="mainItem">Aqualens</li>
+            <li class="mainItem">Franchise Enquiry</li>
+            <li class="mainItem">Cobrowsing</li>
+            <li class="mainItem">Engineering Blog</li>
+          </ul>
+        </nav>
+        <nav class="contact mainItem">Contact Us</nav>
+      </div>
+      <div class="main_nav">
+        <div class="top_nav">
+          <div class="logo">
+            <div class="logo_container">
+              <a href="index.html"
+                ><img
+                  src="https://static1.lenskart.com/media/desktop/img/lk-logo-f.png"
+                  alt="lenskart"
+                  title="Lenskart"
+              /></a>
+            </div>
+          </div>
+          <div class="search">
+            <form>
+              <div class="search_container">
+                <input type="text" placeholder="What are you looking for ?" /><i
+                  class="search_icon"
+                ></i>
+              </div>
+            </form>
+          </div>
+          <div class="cartWrapper">
+            <div class="cart_items_container">
+              <ul>
+                <li class="cart_item" onclick="signPage()">
+                  <a id="current_user">Sign In & Sign Up</a>
+                </li>
+
+                <li class="cart_item"><a href="">Track Order</a></li>
+                <li onclick="wishlist()" class="cart_item3">
+                  <div class="counter" id="count">0</div>
+                  <a><i class="shortlist_icon"></i> Shortlist</a>
+                </li>
+                <li class="cart_item4" onclick="cartPopUp()">
+                  <div class="counter" id="counter">0</div>
+                  <a><i class="cart_icon"></i> Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_nav_container">
+          <div class="bottom_nav">
+            <div class="bottom_nav_main">
+              <div class="nav_main_container">
+                <ul>
+                  <div class="nav_main_level0">
+                    <li class="eyeglasses nav_list">Eyeglasses</li>
+                    <div
+                      class="dropdown_container absolute_position display_none"
+                    >
+                      <div class="nav_main_level1">
+                        <div class="gender">
+                          <a href=""
+                            ><div
+                              class="
+                                select_gender
+                                bold
+                                level_1
+                                relative_position
+                              "
+                            >
+                              SELECT GENDER
+                            </div></a
+                          >
+                          <div class="gender_men level_1">
+                            <p class="bold">MEN</p>
+
+                            <div class="relative_position">
+                              <i class="face_men"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+                            <div class="gender_men_catagory display_none">
+                              <a href=""
+                                ><div class="select_catagory bold level_1">
+                                  SELECT CATAGORY
+                                </div></a
+                              >
+                              <div class="catagory_1 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>CLASSIC EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <a href="product.html">
+                                          <li>New Arrivals</li></a
+                                        >
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                        <li>Tinted Eyeglasses</li>
+                                        <li>Computer Eyeglasses</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">FRAME TYPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Wayfarer Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Air Flex Collection</li>
+                                        <li>Classic Acetate Collection</li>
+                                        <li>Air Signia Collection</li>
+                                        <li>Sleek Steel Collection</li>
+                                        <li>Air Silicon Collection</li>
+                                        <li>Blend Edit Collection</li>
+                                        <li>Air Clip On Collection</li>
+                                        <li>HD Acetate Collection</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Vincent Chase</li>
+                                        <li>John Jacobs</li>
+                                        <li>Ray-Ban</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_2 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>PREMIUM EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 3000</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_2">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Ray-Ban</li>
+                                        <li>John Jacobs</li>
+                                        <li>Vincent Chase</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">FRAME SHAPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">STYLE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rich Acetate</li>
+                                        <li>Terrific Tansparent</li>
+                                        <li>Gold & Rose Gold</li>
+                                        <li>Hybrid Affair</li>
+                                        <li>Shape Shifters</li>
+                                        <li>Square Up</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_3 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>COMPUTER EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Starting at Rs.999</li>
+                                        <li>For your Kids</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gender_women level_1">
+                            <p class="bold">WOMEN</p>
+                            <div class="relative_position">
+                              <i class="face_women"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+
+                            <div class="gender_women_catagory display_none">
+                              <a href=""
+                                ><div class="select_catagory bold level_1">
+                                  SELECT CATAGORY
+                                </div></a
+                              >
+                              <div class="catagory_1 level_2">
+                                <div class="catagory_item">
+                                  <p><b>CLASSIC EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                        <li>Tinted Eyeglasses</li>
+                                        <li>Computer Eyeglasses</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">FRAME TYPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Wayfarer Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Air Flex Collection</li>
+                                        <li>Classic Acetate Collection</li>
+                                        <li>Air Signia Collection</li>
+                                        <li>Sleek Steel Collection</li>
+                                        <li>Air Silicon Collection</li>
+                                        <li>Blend Edit Collection</li>
+                                        <li>Air Clip On Collection</li>
+                                        <li>HD Acetate Collection</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Vincent Chase</li>
+                                        <li>John Jacobs</li>
+                                        <li>Ray-Ban</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_2 level_2">
+                                <div class="catagory_item">
+                                  <p><b>PREMIUM EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 3000</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_2">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Ray-Ban</li>
+                                        <li>John Jacobs</li>
+                                        <li>Vincent Chase</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">FRAME SHAPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">STYLE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rich Acetate</li>
+                                        <li>Terrific Tansparent</li>
+                                        <li>Gold & Rose Gold</li>
+                                        <li>Hybrid Affair</li>
+                                        <li>Shape Shifters</li>
+                                        <li>Square Up</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_3 level_2">
+                                <div class="catagory_item">
+                                  <p><b>COMPUTER EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Starting at Rs.999</li>
+                                        <li>For your Kids</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gender_kids level_1">
+                            <p class="bold">KIDS</p>
+
+                            <div class="relative_position">
+                              <i class="face_kids"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+                            <div class="display_none">
+                              <div class="kids_catagory">
+                                <div class="level_1 bold">OUR TOP PICKS</div>
+                                <div class="menu">
+                                  <ul class="list_item">
+                                    <li>Kids Computer Glasses</li>
+                                    <li>Staring @599</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_main_level0">
+                    <li class="computer_glasses nav_list">Computer Glasses</li>
+                    <div
+                      class="dropdown_container absolute_position display_none"
+                    >
+                      <div class="nav_main_level1">
+                        <div class="gender">
+                          <a href=""
+                            ><div
+                              class="
+                                select_gender
+                                bold
+                                level_1
+                                relative_position
+                              "
+                            >
+                              SELECT GENDER
+                            </div></a
+                          >
+                          <div class="gender_men level_1">
+                            <p class="bold">MEN</p>
+
+                            <div class="relative_position">
+                              <i class="face_men"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+                            <div class="gender_men_catagory display_none">
+                              <a href=""
+                                ><div class="select_catagory bold level_1">
+                                  SELECT CATAGORY
+                                </div></a
+                              >
+                              <div class="catagory_1 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>CLASSIC EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                        <li>Tinted Eyeglasses</li>
+                                        <li>Computer Eyeglasses</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">FRAME TYPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Wayfarer Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Air Flex Collection</li>
+                                        <li>Classic Acetate Collection</li>
+                                        <li>Air Signia Collection</li>
+                                        <li>Sleek Steel Collection</li>
+                                        <li>Air Silicon Collection</li>
+                                        <li>Blend Edit Collection</li>
+                                        <li>Air Clip On Collection</li>
+                                        <li>HD Acetate Collection</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Vincent Chase</li>
+                                        <li>John Jacobs</li>
+                                        <li>Ray-Ban</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_2 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>PREMIUM EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 3000</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_2">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Ray-Ban</li>
+                                        <li>John Jacobs</li>
+                                        <li>Vincent Chase</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">FRAME SHAPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">STYLE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rich Acetate</li>
+                                        <li>Terrific Tansparent</li>
+                                        <li>Gold & Rose Gold</li>
+                                        <li>Hybrid Affair</li>
+                                        <li>Shape Shifters</li>
+                                        <li>Square Up</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_3 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>COMPUTER EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Starting at Rs.999</li>
+                                        <li>For your Kids</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gender_women level_1">
+                            <p class="bold">WOMEN</p>
+                            <div class="relative_position">
+                              <i class="face_women"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+
+                            <div class="gender_women_catagory display_none">
+                              <a href=""
+                                ><div class="select_catagory bold level_1">
+                                  SELECT CATAGORY
+                                </div></a
+                              >
+                              <div class="catagory_1 level_2">
+                                <div class="catagory_item">
+                                  <p><b>CLASSIC EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                        <li>Tinted Eyeglasses</li>
+                                        <li>Computer Eyeglasses</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">FRAME TYPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Wayfarer Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Air Flex Collection</li>
+                                        <li>Classic Acetate Collection</li>
+                                        <li>Air Signia Collection</li>
+                                        <li>Sleek Steel Collection</li>
+                                        <li>Air Silicon Collection</li>
+                                        <li>Blend Edit Collection</li>
+                                        <li>Air Clip On Collection</li>
+                                        <li>HD Acetate Collection</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Vincent Chase</li>
+                                        <li>John Jacobs</li>
+                                        <li>Ray-Ban</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_2 level_2">
+                                <div class="catagory_item">
+                                  <p><b>PREMIUM EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 3000</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_2">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Ray-Ban</li>
+                                        <li>John Jacobs</li>
+                                        <li>Vincent Chase</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">FRAME SHAPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">STYLE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rich Acetate</li>
+                                        <li>Terrific Tansparent</li>
+                                        <li>Gold & Rose Gold</li>
+                                        <li>Hybrid Affair</li>
+                                        <li>Shape Shifters</li>
+                                        <li>Square Up</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_3 level_2">
+                                <div class="catagory_item">
+                                  <p><b>COMPUTER EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Starting at Rs.999</li>
+                                        <li>For your Kids</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gender_kids level_1">
+                            <p class="bold">KIDS</p>
+
+                            <div class="relative_position">
+                              <i class="face_kids"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+                            <div class="display_none">
+                              <div class="kids_catagory">
+                                <div class="level_1 bold">OUR TOP PICKS</div>
+                                <div class="menu">
+                                  <ul class="list_item">
+                                    <li>Kids Computer Glasses</li>
+                                    <li>Staring @599</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav_main_level0">
+                    <li class="kids_glasses nav_list">Kids Glasses</li>
+                    <div
+                      class="dropdown_container absolute_position display_none"
+                    >
+                      <div class="menu">
+                        <div class="level_1 bold">SELECT CATAGORY</div>
+                        <ul class="list_item">
+                          <li>Eyeglasses</li>
+                          <li>Sunglasses</li>
+                          <li>BLU O Computer Glasses</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <li class="contact_lenses nav_list">Contact Lenses</li>
+                  <div class="nav_main_level0">
+                    <li class="sunglasses nav_list">Sunglasses</li>
+                    <div
+                      class="dropdown_container absolute_position display_none"
+                    >
+                      <div class="nav_main_level1">
+                        <div class="gender">
+                          <a href=""
+                            ><div
+                              class="
+                                select_gender
+                                bold
+                                level_1
+                                relative_position
+                              "
+                            >
+                              SELECT GENDER
+                            </div></a
+                          >
+                          <div class="gender_men level_1">
+                            <p class="bold">MEN</p>
+
+                            <div class="relative_position">
+                              <i class="face_men"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+                            <div class="gender_men_catagory display_none">
+                              <a href=""
+                                ><div class="select_catagory bold level_1">
+                                  SELECT CATAGORY
+                                </div></a
+                              >
+                              <div class="catagory_1 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>CLASSIC EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                        <li>Tinted Eyeglasses</li>
+                                        <li>Computer Eyeglasses</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">FRAME TYPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Wayfarer Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Air Flex Collection</li>
+                                        <li>Classic Acetate Collection</li>
+                                        <li>Air Signia Collection</li>
+                                        <li>Sleek Steel Collection</li>
+                                        <li>Air Silicon Collection</li>
+                                        <li>Blend Edit Collection</li>
+                                        <li>Air Clip On Collection</li>
+                                        <li>HD Acetate Collection</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Vincent Chase</li>
+                                        <li>John Jacobs</li>
+                                        <li>Ray-Ban</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_2 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>PREMIUM EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 3000</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_2">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Ray-Ban</li>
+                                        <li>John Jacobs</li>
+                                        <li>Vincent Chase</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">FRAME SHAPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">STYLE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rich Acetate</li>
+                                        <li>Terrific Tansparent</li>
+                                        <li>Gold & Rose Gold</li>
+                                        <li>Hybrid Affair</li>
+                                        <li>Shape Shifters</li>
+                                        <li>Square Up</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_3 flex level_2">
+                                <div class="catagory_item">
+                                  <p><b>COMPUTER EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow fa fa-angle-right"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Starting at Rs.999</li>
+                                        <li>For your Kids</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gender_women level_1">
+                            <p class="bold">WOMEN</p>
+                            <div class="relative_position">
+                              <i class="face_women"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+
+                            <div class="gender_women_catagory display_none">
+                              <a href=""
+                                ><div class="select_catagory bold level_1">
+                                  SELECT CATAGORY
+                                </div></a
+                              >
+                              <div class="catagory_1 level_2">
+                                <div class="catagory_item">
+                                  <p><b>CLASSIC EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                        <li>Tinted Eyeglasses</li>
+                                        <li>Computer Eyeglasses</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">FRAME TYPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Wayfarer Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Air Flex Collection</li>
+                                        <li>Classic Acetate Collection</li>
+                                        <li>Air Signia Collection</li>
+                                        <li>Sleek Steel Collection</li>
+                                        <li>Air Silicon Collection</li>
+                                        <li>Blend Edit Collection</li>
+                                        <li>Air Clip On Collection</li>
+                                        <li>HD Acetate Collection</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Vincent Chase</li>
+                                        <li>John Jacobs</li>
+                                        <li>Ray-Ban</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_2 level_2">
+                                <div class="catagory_item">
+                                  <p><b>PREMIUM EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 3000</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_2">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">BRANDS</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Ray-Ban</li>
+                                        <li>John Jacobs</li>
+                                        <li>Vincent Chase</li>
+                                        <li>Carrera</li>
+                                        <li>Oakley</li>
+                                        <li>Vogue</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu_2">
+                                    <div class="level_1 bold">
+                                      OUR TOP PICKS
+                                    </div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>New Arrivals</li>
+                                        <li>Best Seller</li>
+                                        <li>Lenskart BLU lenses</li>
+                                        <li>Trending</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu3">
+                                    <div class="level_1 bold">FRAME SHAPE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rectangle Frames</li>
+                                        <li>Round Frames</li>
+                                        <li>Aviator Frames</li>
+                                        <li>Cat-Eye Frames</li>
+                                        <li>Rimless Frames</li>
+                                        <li>Half Rim Frames</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="menu menu4">
+                                    <div class="level_1 bold">STYLE</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Rich Acetate</li>
+                                        <li>Terrific Tansparent</li>
+                                        <li>Gold & Rose Gold</li>
+                                        <li>Hybrid Affair</li>
+                                        <li>Shape Shifters</li>
+                                        <li>Square Up</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="catagory_3 level_2">
+                                <div class="catagory_item">
+                                  <p><b>COMPUTER EYEGLASSES</b></p>
+                                  <p>STARTING FROM <b>RS 999</b></p>
+                                </div>
+                                <i class="arrow"></i>
+                                <div class="show_menu flexbox_1">
+                                  <div class="menu menu_1">
+                                    <div class="level_1 bold">COLLECTION</div>
+                                    <div class="list">
+                                      <ul class="list_item">
+                                        <li>Starting at Rs.999</li>
+                                        <li>For your Kids</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gender_kids level_1">
+                            <p class="bold">KIDS</p>
+
+                            <div class="relative_position">
+                              <i class="face_kids"></i>
+                            </div>
+                            <i class="arrow fa fa-angle-right"></i>
+                            <div class="display_none">
+                              <div class="kids_catagory">
+                                <div class="level_1 bold">OUR TOP PICKS</div>
+                                <div class="menu">
+                                  <ul class="list_item">
+                                    <li>Kids Computer Glasses</li>
+                                    <li>Staring @599</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <li class="home_eye_test nav_list">
+                    Home Eye-Test with Trial
+                  </li>
+                  <li class="store_locator nav_list">Store Locator</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bottom_nav_sec">
+              <div class="nav_sec_container">
+                <div>
+                  <img
+                    src="	https://static.lenskart.com/media/desktop/img/menu/gold-icon.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://static.lenskart.com/media/desktop/img/menu/blu-icon.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://static.lenskart.com/media/desktop/img/menu/icon_try_on.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product_detail_wrapper">
+      <div class="product_images" id="product_images"></div>
+      <div class="product_details" id="product_details"></div>
+    </div>
+
+    <footer style="margin-top: 300px">
+      <div class="foot">
+        <center>
+          <span>Follow Us</span><br>
+          <br />
+          <ul class="social_media">
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-pinterest"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+          </ul>
+          <br /><br />
+          <p>
+            <b
+              >Download Lenskart App to buy
+              <a href="">Eyeglasses, Sunglasses and Contact Lenses.</a></b
+            >
+          </p>
+        </center>
+      </div>
+      <br />
+      <div class="foot_links">
+        <ul>
+          <li>STORE LOCATOR</li>
+          <li>FAQ</li>
+          <li>ENTER MY POWER</li>
+          <li>BUYING GUIDE</li>
+          <li>FRAME SIZE</li>
+        </ul>
+      </div>
+
+      <div class="extra_links">
+        <ul>
+          <li>We are Hiring</li>
+          <li>Refer & Earn</li>
+          <li>About Us</li>
+          <li>T&C</li>
+          <li>Site Map</li>
+          <li>Disclaimer</li>
+          <li>Privacy</li>
+          <li>Lenskart Coupons</li>
+        </ul>
+      </div>
+
+      <div class="footer_wrap_category-nav">
+        <ul class="parent-nav">
+          <li>
+            <span class="headline">Eyeglasses</span>
+            <ul class="children-nav">
+              <li>
+                <a href="/eyeglasses/marketing/all-eoss.html"
+                  ><span>Free Frame</span></a
+                >
+              </li>
+              <li>
+                <a href="/eyeglasses/brands/ray-ban-eyeglasses.html"
+                  ><span>Ray-Ban</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/eyeglasses/marketing/vc-air-bestseller-eyeglasses.html"
+                  ><span>Vincent Chase</span></a
+                >
+              </li>
+              <li>
+                <a href="/eyeglasses/brands/john-jacobs-eyeglasses.html"
+                  ><span>John Jacobs</span></a
+                >
+              </li>
+              <li>
+                <a href="/eyeglasses/frame-style/full-rim.html"
+                  ><span>Full Rim</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/eyeglasses/brands/vincent-chase-eyeglasses/half-rim.html"
+                  ><span>Half Rim</span></a
+                >
+              </li>
+              <li>
+                <a href="/eyeglasses/marketing/vincent-chase-rimless.html"
+                  ><span>Rim Less</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/eyeglasses/brands/vincent-chase-eyeglasses/cat-eye.html"
+                  ><span>Cat Eye</span></a
+                >
+              </li>
+              <li>
+                <a href="/try-at-home"><span>Eye Checkup</span></a>
+              </li>
+              <li>
+                <a href="/eyeglasses.html"><span>Eyeglasses</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="headline">Sunglasses</span>
+            <ul class="children-nav">
+              <li>
+                <a href="/sunglasses/brands/ray-ban-sunglasses.html"
+                  ><span>Ray Ban</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses/brands/oakley-sunglasses.html"
+                  ><span>Oakley</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses/brands/john-jacobs.html"
+                  ><span>John Jacobs</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses/brands/vincent-chase-sunglasses.html"
+                  ><span>Vincent Chase</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses/brands/vogue-sunglasses.html"
+                  ><span>Vogue</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses/frame-shape/aviator-sunglasses.html"
+                  ><span>Aviator Style</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses/frame-shape/wayfarer-sunglases.html"
+                  ><span>Wayfarer Style</span></a
+                >
+              </li>
+              <li>
+                <a href="/eyewear-accessories.html"
+                  ><span>Eyewear Accessories</span></a
+                >
+              </li>
+              <li>
+                <a href="/sunglasses.html"><span>Sunglasses</span></a>
+              </li>
+              <li>
+                <a href="/goggles.html"><span>Goggles</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="headline">Contact Lenses</span>
+            <ul class="children-nav">
+              <li>
+                <a
+                  href="/contact-lenses/top-contact-lenses-brands/bausch-lomb-contact-lenses.html"
+                  ><span>Bausch and lomb</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/contact-lens-type/colour-disposable-contact-lenses.html"
+                  ><span>Colour lenses</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/contact-lens-type/daily-disposable-contact-lenses.html"
+                  ><span>Daily disposable</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/contact-lens-type/monthly-disposable-contact-lenses.html"
+                  ><span>Monthly disposable</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/contact-lens-type/toric-contact-lenses.html"
+                  ><span>Toric lenses</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/top-contact-lenses-brands/johnson-johnson-contact-lenses.html"
+                  ><span>Johnson &amp; johnson</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/top-contact-lenses-brands/cooper-vision-contact-lenses.html"
+                  ><span>Cooper vision lenses</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/most-popular-contact-lenses/acuvue-contact-lenses.html"
+                  ><span>Acuvue</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/contact-lenses/most-popular-contact-lenses/purevision-contact-lenses.html"
+                  ><span>Purevision</span></a
+                >
+              </li>
+              <li>
+                <a
+                  target="_self"
+                  rel="noreferrer"
+                  href="https://www.lenskart.com/sitemap.xml"
+                  ><span>Sitemap XML</span></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="javaScript/cart.js"></script>
+  <script>
+    let details = JSON.parse(localStorage.getItem("productDetails"));
+    let imageBox = document.getElementById("product_images");
+    let detailBox = document.getElementById("product_details");
+
+    let row = document.createElement("div");
+    row.setAttribute("class", "row");
+
+    let detail = document.createElement("div");
+    detail.setAttribute("class", "detail");
+
+    details.forEach((element) => {
+      // appending image of product
+
+      let div1 = document.createElement("div");
+      div1.setAttribute("class", "img_wrapper");
+      let img1 = document.createElement("img");
+      img1.src = element.imageBg;
+      div1.appendChild(img1);
+
+      let div2 = document.createElement("div");
+      div2.setAttribute("class", "img_wrapper");
+      let img2 = document.createElement("img");
+      img2.src = element.imageFg;
+      div2.appendChild(img2);
+
+      let div3 = document.createElement("div");
+      div3.setAttribute("class", "img_wrapper");
+      let img3 = document.createElement("img");
+      img3.src = element.imageM1;
+      div3.appendChild(img3);
+
+      let div4 = document.createElement("div");
+      div4.setAttribute("class", "img_wrapper");
+      let img4 = document.createElement("img");
+      img4.src = element.imageM2;
+      div4.appendChild(img4);
+
+      let div5 = document.createElement("div");
+      div5.setAttribute("class", "img_wrapper");
+      let img5 = document.createElement("img");
+      img5.src = element.imageF1;
+      div5.appendChild(img5);
+
+      let div6 = document.createElement("div");
+      div6.setAttribute("class", "img_wrapper");
+      let img6 = document.createElement("img");
+      img6.src = element.imageF2;
+      div6.appendChild(img6);
+
+      let div7 = document.createElement("div");
+      div7.setAttribute("class", "img_wrapper");
+      let img7 = document.createElement("img");
+      img7.src = element.imageG1;
+      div7.appendChild(img7);
+
+      let div8 = document.createElement("div");
+      div8.setAttribute("class", "img_wrapper");
+      let img8 = document.createElement("img");
+      img8.src = element.imageG2;
+      div8.appendChild(img8);
+
+      let div9 = document.createElement("div");
+      div9.setAttribute("class", "img_wrapper");
+      let img9 = document.createElement("img");
+      img9.src = element.imageG3;
+      div9.appendChild(img9);
+
+      let div0 = document.createElement("div");
+      div0.setAttribute("class", "img_wrapper");
+      let img0 = document.createElement("img");
+      img0.src = element.imageG4;
+      div0.appendChild(img0);
+
+      row.append(div1, div2, div3, div4, div5, div6, div7, div8, div9, div0);
+
+      // appending detail of the product
+
+      let category = document.createElement("p");
+      category.setAttribute("class", "catagory");
+      category.innerText = `${element.productcategory}`;
+
+      let name = document.createElement("p");
+      name.setAttribute("class", "name");
+      name.innerText = `${element.productName}`;
+
+      let size = document.createElement("p");
+      size.setAttribute("class", "size");
+      size.innerHTML = `Size: ${element.size}`;
+
+      let price = document.createElement("p");
+      price.setAttribute("class", "price");
+      price.innerText = `₹${element.price}`;
+
+      let frameLens = document.createElement("span");
+      frameLens.setAttribute("class", "frame_lens");
+      frameLens.innerText = "Frame + Lens";
+
+      let color = document.createElement("div");
+      let blue = document.createElement("div");
+      let red = document.createElement("div");
+      color.setAttribute("class", "color");
+      blue.setAttribute("class", "blue");
+      red.setAttribute("class", "red");
+      color.append(blue, red);
+
+      let power = document.createElement("div");
+      power.setAttribute("class", "power");
+      power.innerHTML = `<p>Select Power Type</p><div class="power_grid"><form><div><input type="radio" name="choice" checked="true" value="single vision"><label for="single vision">Single Vision</label></div><div><input type="radio" name="choice" value="bifocal/progressive"><label for="bifocal/progressive">Bifocal/Progressive</label></div><div><input type="radio" name="choice" value="zero power"><label for="zero power">Zero Power</label></div><div><input type="radio" name="choice" value="frame only"><label for="frame only">Frame Only</label></div></form></div>`;
+
+      let smtpwr = document.createElement("button");
+      smtpwr.innerHTML =
+        "<p>SELECT LENSES <br> <span>(with 1 Year Warranty & 14 Day Return)</span></p>";
+      smtpwr.setAttribute("class", "btn");
+      smtpwr.onclick = function () {
+        checkPower();
+      };
+
+      detail.append(
+        category,
+        name,
+        size,
+        price,
+        frameLens,
+        color,
+        power,
+        smtpwr
+      );
+    });
+
+    imageBox.appendChild(row);
+    detailBox.appendChild(detail);
+
+    function checkPower() {
+      let radios = document.getElementsByName("choice");
+      let val = "";
+      for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+          val = radios[i].value;
+          break;
+        }
+      }
+      if (val == "single vision") addCartPopUp();
+      else if (val == "zero power") addCartPopUpX();
+      else addtocartY();
+    }
+
+    function addCartPopUp() {
+      let item = document.querySelectorAll("#addCartPopUp");
+      item[0].classList.add("addCartPopUp_display");
+      item[1].classList.add("addCartPopUp_display");
+    }
+    function addCartPopOut() {
+      let item = document.querySelectorAll("#addCartPopUp");
+      item[0].classList.remove("addCartPopUp_display");
+      item[1].classList.remove("addCartPopUp_display");
+    }
+    function addCartPopUpX() {
+      let item = document.querySelectorAll("#addCartPopUpX");
+      item[0].classList.add("addCartPopUp_display");
+      item[1].classList.add("addCartPopUp_display");
+    }
+    function addCartPopOutX() {
+      let item = document.querySelectorAll("#addCartPopUpX");
+      item[0].classList.remove("addCartPopUp_display");
+      item[1].classList.remove("addCartPopUp_display");
+    }
+  </script>
+</html>

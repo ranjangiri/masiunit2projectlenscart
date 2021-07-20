@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "futura std heavy";
+  src: url("/fonts/FuturaStdHeavy.woff") format("woff");
+}
+@font-face {
+  font-family: "futura std book";
+  src: url("/fonts/FuturaStdBook.woff") format("woff");
+}
+@font-face {
+  font-family: "futura std medium";
+  src: url("/fonts/FuturaStdMedium.woff") format("woff");
+}
+
+* {
+  font-family: "futura std book";
+}
+body {
+  margin: 0%;
+}
+.flex {
+  display: flex;
+}
+.flx_container .flex div p {
+  width: 90%;
+  color: rgb(33, 158, 156);
+  font-family: "futura std book";
+  font-size: 1.1vw;
+  display: flex;
+  justify-content: space-between;
+}
+.flx_container .flex {
+  justify-content: space-between;
+}
+.btn-style {
+  color: green;
+  border: 1px solid green;
+  border-radius: 50%;
+}
+
+.t-h1 {
+  text-align: center;
+  width: 50%;
+}
+.inn-div {
+  margin-bottom: 10px;
+  width: 98%;
+  height: 30px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.76);
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.top-div {
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  height: 30px;
+  width: 99%;
+}
+.ans-div {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  color: black;
+  height: 60px;
+  padding-left: 10px;
+  padding-top: 15px;
+  width: 98%;
+}
+.redcolor {
+  font-family: "futura std book";
+  background-color: red;
+  height: 25px;
+  font-size: 1.2vw;
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+.colorp {
+  color: white;
+  height: 40px;
+  background-color: coral;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 20%;
+  border: none;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+.remove-btn {
+  border: 0;
+  font-size: 25px;
+  background-color: white;
+}
+.parent {
+  margin: auto;
+  width: 80%;
+  border-left: 1px solid rgba(128, 128, 128, 0.281);
+  border-right: 1px solid rgba(128, 128, 128, 0.329);
+  text-align: center;
+}
+.checkout_shopping_cart {
+  background-color: rgb(75, 76, 81);
+  color: white;
+  font-family: "futura std book";
+  font-size: 14px;
+  padding: 5px 0px;
+  text-align: start;
+}
+
+.pimage {
+  width: 100%;
+}
+
+.pqty {
+  text-align: center;
+}
+
+.smallbox {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+
+.width60 {
+  width: 60%;
+}
+.lenscart-logo {
+  background-color: rgb(59, 59, 59);
+  margin-bottom: 20px;
+}
+.padding10 {
+  padding-left: 10%;
+}
+.icon {
+  width: 30%;
+  height: 250px;
+  border: 1px solid rgba(128, 128, 128, 0.315);
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+  font-size: 1vw;
+  color: grey;
+}
+.icon-bottom {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+}
+.top-btn {
+  background-color: rgb(77, 77, 77);
+  width: 30%;
+  color: white;
+  height: 40px;
+  border: none;
+  font-size: 1.2vw;
+  float: left;
+  margin-right: 10px;
+  clip-path: polygon(0 0, 90% 0%, 100% 50%, 90% 100%, 0 100%, 10% 50%);
+}
+.top-btn p {
+  text-align: center;
+  margin-top: 10px;
+}
+.top-btn + .top-btn:nth-child(n) {
+  opacity: 0.2;
+}
+.top-span {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  padding: 1px 5px;
+  margin-right: 3px;
+}
+.width25 {
+  width: 30%;
+  font-family: "futura std book";
+  font-size: 1vw;
+  color: rgb(65, 65, 65);
+}
+
+.totalprice {
+  height: fit-content;
+  border-collapse: collapse;
+  font-weight: bolder;
+  color: rgb(77, 76, 76);
+}
+.totalprice1 {
+  font-size: 1vw;
+}
+.cart_bill {
+  height: 40px;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.315);
+}
+.totalprice td {
+  width: 100%;
+  font-family: "futura std book";
+}
+.totalprice2 {
+  border-top: 2px solid rgba(128, 128, 128, 0.315);
+  margin-bottom: 0%;
+}
+.totalprice2 td:nth-child(2) {
+  color: rgb(33, 158, 156);
+  font-weight: bolder;
+}
+.flex2 {
+  width: 80%;
+  margin: auto;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  flex-flow: column wrap;
+  border-top: 2px solid rgba(128, 128, 128, 0.384);
+  border-right: 1px solid rgba(128, 128, 128, 0.322);
+  border-left: 1px solid rgba(128, 128, 128, 0.301);
+}
+.width40 {
+  width: 40%;
+}
+.gold {
+  background-color: greenyellow;
+  text-align: center;
+}
+.input {
+  width: 35%;
+  margin-bottom: 40px;
+  height: 25px;
+}
+.checkbox {
+  border-radius: 50%;
+}
+.thanks {
+  text-align: center;
+  position: fixed;
+  z-index: 1000;
+  top: 30%;
+  left: 35%;
+  background-color: teal;
+  border: none;
+  width: 30%;
+  height: 50%;
+  transform: scale(0);
+}
+.thanks:hover {
+  background-color: rgb(3, 180, 180);
+}
+.thanks h1 {
+  font-family: "Rajdhani", sans-serif, "regular";
+  color: white;
+}
+.thanks button {
+  border: none;
+  background-color: yellow;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: grey;
+}
+.thanks button:hover {
+  background-color: rgb(201, 201, 3);
+  color: white;
+}
+.show_thanks {
+  transition: transform 0.2s ease-out;
+  transform: scale(1);
+}

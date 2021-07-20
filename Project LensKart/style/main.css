@@ -1,0 +1,400 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  overflow-x: hidden;
+}
+main {
+  width: 100%;
+}
+.margin_top {
+  margin-top: 30px;
+}
+@font-face {
+  font-family: "futura std heavy";
+  src: url("/fonts/FuturaStdHeavy.woff") format("woff");
+}
+@font-face {
+  font-family: "futura std book";
+  src: url("/fonts/FuturaStdBook.woff") format("woff");
+}
+@font-face {
+  font-family: "futura std medium";
+  src: url("/fonts/FuturaStdMedium.woff") format("woff");
+}
+/* 
+main content first row css */
+
+.glasses_container {
+  width: 100%;
+}
+.glasses img {
+  width: 100%;
+}
+.glasses {
+  font-size: 1.4vw;
+  padding: 2vw;
+  width: 90%;
+  margin: auto;
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.glasses li {
+  padding: 1.4vw;
+  background-color: rgb(250, 250, 250);
+  width: 11vw;
+  height: 16vh;
+  border-radius: 8px;
+}
+
+.dropdown_card {
+  width: fit-content;
+  position: relative;
+}
+
+.dropdown_card:hover .dropdown_window {
+  display: block;
+  margin-left: -2.1vw;
+  box-shadow: 2px 2px 8px rgba(172, 171, 171, 0.76);
+}
+.dropdown_window {
+  top: 0%;
+  position: absolute;
+  z-index: 10;
+  display: none;
+  width: 18vw;
+  min-width: 170px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+}
+.dropdown_window_1 {
+  width: 11vw;
+  min-width: 90px;
+  height: 20vh;
+  padding: 1rem;
+}
+.dropdown_window_2 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dropdown_window_2 i {
+  color: aquamarine;
+}
+.dropdown_window_2 td:nth-child(1) {
+  font-family: "Rajdhani", sans-serif, "regular";
+  font-size: small;
+}
+.dropdown_window_2 td:nth-child(2) {
+  font-family: "Rajdhani", sans-serif, "regular";
+  font-size: small;
+}
+
+.dropdown_window_2 table td {
+  border-top: 1px solid rgba(177, 175, 175, 0.692);
+  padding: 0px 5px;
+}
+.dropdown_window_2 table td div {
+  padding: 1vw .5vw 0px 0px;
+}
+
+.dropdown_window_2 table tr:hover {
+  background-color: rgb(245, 245, 245);
+}
+.viewall_link {
+  text-decoration: none;
+  color: rgb(6, 180, 166);
+  padding: 1vw .5px;
+}
+
+/* lenskart main carousel css */
+
+.carousel {
+  width: fit-content;
+  height: fit-content;
+}
+.carousel img {
+  width: 100%;
+  position: relative;
+}
+.fdbtn {
+  position: absolute;
+  height: 50px;
+  width: 45px;
+  background-color: black;
+  z-index: 1;
+  right: 2%;
+  margin-top: 8%;
+}
+.bdbtn {
+  position: absolute;
+  height: 50px;
+  width: 45px;
+  background-color: black;
+  z-index: 1;
+  left: 2%;
+  margin-top: 8%;
+}
+.white {
+  color: white;
+}
+
+.banner_1 {
+  margin: 20px auto 20px auto;
+}
+.banner_1 img {
+  width: 100%;
+}
+
+.style_guides {
+  margin: 50px auto 20px auto;
+  height: fit-content;
+  border: black;
+}
+.style_guides h1 {
+  font-family: "futura std heavy";
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+}
+.poster img {
+  width: 100%;
+}
+
+.banner_2,
+.banner_3 {
+  height: fit-content;
+  margin: 20px auto;
+}
+.banner_2 img,
+.banner_3 img {
+  width: 100%;
+}
+
+.banner_4 {
+  background-color: rgb(255, 184, 158);
+  width: 96%;
+  height: fit-content;
+  margin: 20px auto 20px auto;
+  display: grid;
+  grid-template-columns: auto 30% auto;
+  padding: 15px 0px;
+  overflow-x: hidden;
+}
+.frame_1,
+.frame_3 {
+  height: fit-content;
+  width: fit-content;
+}
+.frame_1 img,
+.frame_3 img {
+  width: 100%;
+}
+
+.banner_4 iframe {
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  border-radius: 25px;
+  border: 2px solid gray;
+}
+
+.tollfree p {
+  margin: 20px 0px;
+  letter-spacing: 1px;
+  font-family: "futura std book";
+  text-align: center;
+  font-size: x-large;
+}
+.insta {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.insta h2 {
+  letter-spacing: 3px;
+  color: rgb(68, 89, 98);
+  font-family: "futura std heavy";
+}
+.insta button {
+  margin-top: 20px;
+  background-color: rgb(59, 159, 149);
+  color: white;
+  font-weight: bold;
+  font-family: "futura std heavy";
+  border: none;
+  padding: 10px 25px;
+}
+
+.computer_glass {
+  margin: 100px auto 10px auto;
+}
+
+.computer_glass p {
+  margin: auto;
+  width: fit-content;
+}
+.heading {
+  display: flex;
+  width: 45%;
+  margin: auto;
+  justify-content: space-around;
+}
+.heading:nth-child(n) {
+  letter-spacing: 4px;
+}
+.heading h3 {
+  font-family: "futura std heavy";
+  color: rgb(68, 89, 98);
+}
+
+.heading p {
+  font-family: "futura std book";
+  font-size: large;
+  color: rgb(50, 156, 174);
+}
+.computer_glass > p {
+  letter-spacing: 2px;
+  font-family: "futura std book", "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: small;
+  padding: 1%;
+}
+
+.product_slider_container {
+  height: fit-content;
+  margin: 20px auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.slide_left,
+.slide_right {
+  position: absolute;
+  top: 30%;
+  z-index: 10;
+  font-size: 2vw;
+  width: fit-content;
+  height: fit-content;
+}
+
+.slide_right {
+  display: none;
+  right: 0%;
+}
+.product_slider {
+  transition: transform 0.5s ease-out;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 28vw 28vw 28vw 28vw 28vw 28vw;
+}
+.product_slider img {
+  width: 80%;
+  padding-inline: 4rem;
+}
+
+.view_btn_container {
+  margin: auto;
+  text-align: center;
+}
+.view_btn {
+  margin: 30px auto;
+  background-color: rgb(59, 159, 149);
+  color: white;
+  font-weight: bold;
+  font-family: "futura std heavy";
+  border: none;
+  padding: 10px 20px;
+  align-self: center;
+}
+
+.customer_review {
+  width: 96%;
+  margin: 30px auto;
+  height: fit-content;
+  background-color: rgb(255, 244, 226);
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+.customer_review div {
+  height: fit-content;
+}
+.customer_review iframe {
+  width: 90%;
+  padding: 1rem;
+}
+.customer_review img {
+  width: 80%;
+  padding: 10vh 8vw;
+}
+.hall_of_fame {
+  margin: 20px auto;
+}
+.hall_of_fame img {
+  width: 100%;
+}
+
+.about {
+  width: 96%;
+  margin: 30px auto;
+  height: fit-content;
+  opacity: 0.8;
+}
+
+.about h1 {
+  font-family: "futura std heavy";
+  padding: 20px 0px;
+}
+.about p {
+  font-family: "futura std medium";
+  font-size: 1vw;
+  font-weight: lighter;
+}
+.about h5 {
+  padding: 5px 5px;
+  opacity: 1;
+  font-family: "futura std heavy";
+}
+#plus {
+  padding: 0px 5px;
+  font-weight: bolder;
+  font-size: 1.5vw;
+}
+.about_glasses {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-gap: 30px;
+}
+.glasses_wrapper {
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  height: fit-content;
+  min-height: 20px;
+}
+.wrapper_item {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper_description { 
+  display: none;
+  padding: 0px 5px;
+  line-height: 18px;
+  word-wrap: none;
+}
+.wrapper_description p{
+  width: 90%;
+}
+.description {
+  display: block;
+}

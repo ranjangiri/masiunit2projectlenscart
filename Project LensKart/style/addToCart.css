@@ -1,0 +1,255 @@
+/* single power css */
+
+.card * {
+  font-family: "futura std heavy";
+}
+.ul * {
+  font-family: "futura std medium";
+}
+.flexY {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.card * {
+  margin-bottom: 10px;
+}
+.containerX {
+  width: 25%;
+  text-align: center;
+  height: 600px;
+  width: 300px;
+}
+.textX {
+  color: peru;
+  font-size: small;
+}
+.colorpowderblue {
+  color: lightseagreen;
+}
+.ul {
+  list-style-type: none;
+  padding: 5px 30px;
+  font-size: 1.2vw;
+}
+.ul li {
+  font-size: 1vw;
+}
+.textX1 {
+  color: white;
+  font-size: small;
+  font-weight: lighter;
+  font-family: "futura std medium";
+}
+.iconX {
+  width: 15px;
+  height: 15px;
+}
+.liclass {
+  padding: 10px 15px;
+  font-size: 15px;
+  margin-top: 5px;
+  color: grey;
+}
+.liclass1 {
+  padding: 10px 2px;
+  font-size: 15px;
+  margin-top: 5px;
+  color: grey;
+}
+
+.card p button {
+  border: none;
+  outline: 0;
+  color: white;
+  background-color: sandybrown;
+  text-align: center;
+  cursor: pointer;
+  width: 90%;
+  height: 35px;
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.imgX {
+  width: 25%;
+  height: 50px;
+  padding-top: 10px;
+  margin: 0;
+}
+.margintop {
+  padding-top: 20px;
+  margin: 0;
+}
+.cut {
+  color: grey;
+}
+.grey {
+  color: grey;
+}
+.headingX {
+  background-color: rgb(242, 242, 242);
+  font-family: "futura std heavy";
+  padding: 2vh 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.headingX p {
+  font-family: "futura std heavy";
+}
+.headingX p span {
+  font-family: "futura std heavy";
+}
+
+.containerX:nth-child(2n + 1) {
+  background-color: rgb(248, 248, 248);
+}
+
+/* zero power css */
+
+.flexZ {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.containerZ {
+  width: 25%;
+  text-align: center;
+  height: 600px;
+  width: 300px;
+}
+
+.textZ {
+  color: peru;
+  font-size: small;
+}
+
+.colorpowderblue {
+  color: lightseagreen;
+}
+
+.ulZ {
+  list-style-type: none;
+  padding: 5px 30px;
+  font-size: 1.2vw;
+}
+.ulZ li {
+  font-size: 1vw;
+}
+
+.textZ1 {
+  color: white;
+  font-family: "futura std medium";
+  font-weight: lighter;
+  font-size: 1.2vw;
+}
+
+.iconZ {
+  width: 15px;
+  height: 15px;
+}
+
+.liclass {
+  padding: 10px 15px;
+  font-size: 15px;
+  margin-top: 5px;
+  color: grey;
+}
+
+.liclass1 {
+  padding: 10px 2px;
+  font-size: 15px;
+  margin-top: 5px;
+  color: grey;
+}
+
+.card p button {
+  padding-top: 2px;
+  border: none;
+  outline: 0;
+  color: white;
+  background-color: sandybrown;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  height: 35px;
+  font-size: 1.2vw;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.imgZ {
+  width: 25%;
+  height: 50px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.margintop {
+  padding-top: 20px;
+  margin: 0;
+}
+
+.cut {
+  color: grey;
+}
+
+.grey {
+  color: grey;
+}
+
+/* .headingZ {
+  margin-left: 5%;
+  font-size: 18px;
+  font-weight: bold;
+} */
+.headingZ {
+  background-color: rgb(242, 242, 242);
+  font-family: "futura std heavy";
+  padding: 2vh 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.headingZ p {
+  font-family: "futura std heavy";
+}
+.headingZ p span {
+  font-family: "futura std heavy";
+}
+.containerZ:nth-child(2n + 1) {
+  background-color: rgb(248, 248, 248);
+}

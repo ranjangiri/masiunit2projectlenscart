@@ -1,0 +1,421 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "rajdhani", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "futura std heavy";
+  src: url("/fonts/FuturaStdHeavy.woff") format("woff");
+}
+@font-face {
+  font-family: "futura std book";
+  src: url("/fonts/FuturaStdBook.woff") format("woff");
+}
+@font-face {
+  font-family: "futura std medium";
+  src: url("/fonts/FuturaStdMedium.woff") format("woff");
+}
+a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+.container {
+  width: 100%;
+  height: fit-content;
+}
+
+.header {
+  height: fit-content;
+  position: sticky;
+  top: 0%;
+  z-index: 20;
+  background-color: white;
+}
+/* top header css */
+
+.top_header {
+  margin: 10px auto;
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  font-family: "Rajdhani", sans-serif, "regular";
+  font-size: 1vw;
+}
+.navList {
+  display: inline;
+  width: 70%;
+  height: fit-content;
+}
+.navList ul {
+  list-style: none;
+  display: inline-flex;
+}
+.navList li {
+  color: rgb(51, 51, 51);
+  word-wrap: none;
+  padding: 0px 5px;
+  border-right: 1px solid rgb(185, 183, 183);
+}
+.mainItem:last-child {
+  border: none;
+}
+.contact {
+  width: 30%;
+  text-align: end;
+  display: inline;
+}
+.mainItem:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* main nav css */
+
+.logo {
+  height: fit-content;
+  width: 20%;
+}
+
+.logo_container img {
+  max-width: 100%;
+}
+
+/* main nav top css */
+.top_nav {
+  margin: auto;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  width: 43%;
+  position: relative;
+}
+.search_container input {
+  width: 100%;
+  height: 5vh;
+  min-height: 23px;
+  padding-inline-start: 0.5rem;
+  color: rgb(168, 168, 168);
+  letter-spacing: 1px;
+  font-family: inherit;
+  border: 1px solid rgb(196, 195, 195);
+}
+input:focus {
+  outline: none;
+}
+.search_container i {
+  background: url(https://static.lenskart.com/media/desktop/img/site-images/Asset-6.svg)
+    no-repeat;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  min-height: 15px;
+  min-width: 13px;
+  height: 3.5vh;
+  width: 1.5vw;
+}
+.cart_items_container ul {
+  display: inline-flex;
+  list-style-type: none;
+}
+.cart_items_container ul li {
+  cursor: pointer;
+  word-wrap: none;
+  padding-left: 2vw;
+}
+.cart_items_container ul li a {
+  text-decoration: none;
+  font-family: "rajdhani-semibold", sans-serif;
+  font-size: 0.91vw;
+  font-weight: 200;
+  color: rgb(95, 95, 95);
+}
+
+.cart_item4 i {
+  background: url(https://static.lenskart.com/media/desktop/img/menu/cart-icon.svg)
+    no-repeat;
+  min-height: 16px;
+  min-width: 16px;
+  height: 2.5vh;
+  width: 1.5vw;
+  display: inline-block;
+  vertical-align: top;
+}
+.cart_item3 i {
+  background: url(https://static.lenskart.com/media/desktop/img/menu/heart-icon.svg)
+    no-repeat;
+  min-height: 14px;
+  min-width: 14px;
+  height: 2.5vh;
+  width: 1.5vw;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* main nav bottom css */
+.bottom_nav_container {
+  width: 100%;
+  height: 6vh;
+  min-height: 25px;
+  background-color: rgb(220, 219, 212);
+}
+.bottom_nav {
+  margin: auto;
+  width: 97%;
+  display: flex;
+  justify-items: right;
+}
+
+.bottom_nav_main {
+  width: 70%;
+}
+.bottom_nav_main ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-flex;
+  list-style-type: none;
+}
+.bottom_nav_main ul .nav_list {
+  font-family: "rajdhani", sans-serif;
+  word-wrap: none;
+  padding: 1.59vh 1vw;
+  font-weight: 600;
+  font-size: 1vw;
+  color: rgb(75, 76, 77);
+  letter-spacing: 0.07vw;
+  position: relative;
+}
+
+.bottom_nav_sec {
+  width: 30%;
+}
+
+.nav_sec_container > div {
+  width: fit-content;
+  float: right;
+}
+.nav_sec_container img {
+  width: 6vw;
+  height: 5.5vh;
+  min-width: 35px;
+  min-height: 20px;
+  padding: 0.3vh 2px;
+}
+
+/* main hoverable navbar css */
+/* main nav level0 */
+
+/* hoverable eyeglasses list item */
+.nav_main_level0 {
+  width: fit-content;
+}
+.display_none {
+  display: none;
+  width: 96vw;
+  position: absolute;
+}
+/* gender container */
+.dropdown_container {
+  color: rgb(51, 51, 51);
+  position: absolute;
+  width: 96vw;
+  height: 55vh;
+  box-shadow: 1px 1px 8px rgb(128, 128, 128);
+}
+
+.gender {
+  display: block;
+  border-right: 1px solid;
+  width: 14vw;
+  font-size: 1.05vw;
+}
+.level_1 {
+  word-wrap: none;
+  padding: 4vh 1vw 4vh 1vw;
+  font-size: 1.19vw;
+  color: rgb(105, 105, 105);
+}
+.relative_position {
+  position: relative;
+}
+.face_men {
+  opacity: 1;
+  background: url(https://static.lenskart.com/media/desktop/img/ic_men.svg)
+    no-repeat;
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 6vw;
+  height: 6vh;
+  margin: 0px;
+  padding: 0px;
+}
+.face_women {
+  opacity: 1;
+  background: url(https://static.lenskart.com/media/desktop/img/ic_women.svg)
+    no-repeat;
+  position: absolute;
+  top: -8px;
+  left: -5px;
+  width: 6vw;
+  height: 6vh;
+  margin: 0px;
+  padding: 0px;
+}
+.face_kids {
+  opacity: 1;
+  background: url(https://static.lenskart.com/media/desktop/img/ic_kids.svg)
+    no-repeat;
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  width: 2.5vw;
+  height: 3vh;
+  margin: 0px;
+  padding: 0px;
+}
+.bold {
+  font-weight: bold;
+}
+.gender_men,
+.gender_women,
+.gender_kids,
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender_men_catagory {
+  position: absolute;
+  top: 0vh;
+  left: 14vw;
+  width: 16vw;
+  border-right: 1.5px solid gray;
+}
+.level_2 {
+  word-wrap: none;
+  padding: 2.5vh 1vw;
+}
+
+.gender_women_catagory {
+  position: absolute;
+  top: 0vh;
+  left: 14vw;
+  width: 16vw;
+  border-right: 1.5px solid gray;
+}
+
+/* nav menu items level 3 */
+
+.flexbox_1 {
+  display: none;
+  width: 65vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 16vw;
+}
+.flexbox_2 {
+  display: none;
+  width: 65vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 16vw;
+}
+.show_menu .menu {
+  width: 25%;
+  height: 100%;
+}
+.menu .list_item {
+  display: block;
+}
+.list_item li {
+  font-size: 1.1vw;
+  letter-spacing: 1px;
+  padding: 0.5vh 1vw;
+}
+
+/* hoverable sunglasses list item */
+
+.absolute_position {
+  position: absolute;
+  left: 1.5vw;
+}
+
+/* main nav hover css*/
+.bottom_nav_main ul .nav_list:hover {
+  background: linear-gradient(80deg, #31b2b0, #edbc31);
+  color: white;
+  cursor: pointer;
+}
+.nav_main_level0:hover .nav_list {
+  background: linear-gradient(80deg, #31b2b0, #edbc31);
+  cursor: pointer;
+}
+.nav_main_level0:hover .dropdown_container {
+  display: block;
+  z-index: 10;
+  background-color: white;
+}
+.gender_men:hover .gender_men_catagory {
+  display: block;
+}
+
+.gender_men:hover {
+  background-color: rgba(218, 218, 218, 0.637);
+  cursor: pointer;
+}
+.gender_women:hover .gender_women_catagory {
+  display: block;
+}
+.gender_women:hover {
+  background-color: rgba(218, 218, 218, 0.637);
+  cursor: pointer;
+}
+.gender_kids:hover {
+  background-color: rgba(218, 218, 218, 0.637);
+  cursor: pointer;
+}
+.gender_kids:hover .display_none {
+  display: block;
+  left: 14vw;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+.list_item li:hover {
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+}
+
+.list_item li:hover::after {
+  font-family: "Font Awesome 5 Free";
+  content: "  \f105";
+}
+.catagory_1:hover {
+  background-color: rgba(218, 218, 218, 0.637);
+  cursor: pointer;
+}
+.catagory_1:hover .flexbox_1 {
+  display: flex;
+}
+.catagory_2:hover {
+  background-color: rgba(218, 218, 218, 0.637);
+  cursor: pointer;
+}
+.catagory_2:hover .flexbox_2 {
+  display: flex;
+}
+.catagory_3:hover {
+  background-color: rgba(218, 218, 218, 0.637);
+  cursor: pointer;
+}
+.catagory_3:hover .flexbox_1 {
+  display: flex;
+}
